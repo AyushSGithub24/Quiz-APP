@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Website</title>
+    <script type="text/JavaScript">
+    //courtesy of BoogieJack.com
+    function killCopy(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=killCopy
+    document.onclick=reEnable
+    }
+    </script>
+    <link rel="stylesheet" href="st.css">
+</head>
+
+<body>
+    <div>
+        <div class="timer">
+            <div class="total-time">Total time: </div>
+            <p>
+                Time:<span id="timer"></span>
+            </p>
+        </div>
+        <div class="container">
+            <h2 id="question"></h2>
+            <ul id="options"></ul>
+            <button id="next">Next</button>
+        </div>
+        <div id="result">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
